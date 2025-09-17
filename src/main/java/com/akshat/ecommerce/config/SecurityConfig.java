@@ -1,7 +1,8 @@
 package com.akshat.ecommerce.config;
 
 import com.akshat.ecommerce.filter.JwtAuthenticationFilter;
-import com.akshat.ecommerce.security.UserDetailsServiceImpl;
+import com.akshat.ecommerce.secuity.UserDetailsServiceImpl;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.ecommerce.config;
+package com.akshat.ecommerce.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

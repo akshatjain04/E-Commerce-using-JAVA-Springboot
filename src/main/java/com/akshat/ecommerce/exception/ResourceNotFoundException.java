@@ -6,7 +6,7 @@ package com.akshat.ecommerce.exception;
  * SOLID: Single Responsibility - specific exception for resource not found
  * scenarios
  */
-public class ResourceNotFoundException {
+public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {
         super(message);
     }

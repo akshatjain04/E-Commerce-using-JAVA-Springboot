@@ -9,7 +9,7 @@ import com.akshat.ecommerce.exception.ResourceNotFoundException;
 import com.akshat.ecommerce.exception.UnauthorizedException;
 import com.akshat.ecommerce.model.User;
 import com.akshat.ecommerce.repository.UserRepository;
-import com.akshat.ecommerce.security.JwtUtil;
+import com.akshat.ecommerce.secuity.JwtUtil;
 import com.akshat.ecommerce.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

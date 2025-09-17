@@ -1,18 +1,18 @@
 package com.akshat.ecommerce.contfoller;
 
-import com.ecommerce.dto.request.UserLoginDto;
-import com.ecommerce.dto.request.UserRegistrationDto;
-import com.ecommerce.dto.response.AuthResponseDto;
-import com.ecommerce.dto.response.UserResponseDto;
-import com.ecommerce.service.UserService;
+import com.akshat.ecommerce.dto.request.UserLoginDto;
+import com.akshat.ecommerce.dto.request.UserRegistrationDto;
+import com.akshat.ecommerce.dto.response.AuthResponseDto;
+import com.akshat.ecommerce.dto.response.UserResponseDto;
+import com.akshat.ecommerce.service.UserService;
+
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
 import java.util.List;
 
 /**

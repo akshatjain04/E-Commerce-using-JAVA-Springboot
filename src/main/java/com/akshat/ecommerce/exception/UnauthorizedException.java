@@ -5,7 +5,7 @@ package com.akshat.ecommerce.exception;
  * Design Pattern: Custom Exception Pattern
  * Security: Specific exception for authentication/authorization failures
  */
-public class UnauthorizedException {
+public class UnauthorizedException extends RuntimeException {
     public UnauthorizedException(String message) {
         super(message);
     }

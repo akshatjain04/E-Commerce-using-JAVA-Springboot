@@ -1,8 +1,10 @@
-package com.ecommerce.controller;
+package com.akshat.ecommerce.contfoller;
 
-import com.ecommerce.dto.request.ProductRequestDto;
-import com.ecommerce.dto.response.ProductResponseDto;
-import com.ecommerce.service.ProductService;
+import com.akshat.ecommerce.dto.request.ProductRequestDto;
+import com.akshat.ecommerce.dto.response.ProductResponseDto;
+import com.akshat.ecommerce.service.ProductService;
+
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +16,6 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 /**
