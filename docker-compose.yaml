@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: ecommerce-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+      MONGO_INITDB_DATABASE: ecommerce
+    volumes:
+      - mongodb_data:/data/db
+      - ./scripts/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    networks:
+      - ecommerce-network
+
+  ecommerce-app:
+    build: .
+    container_name: ecommerce-backend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      MONGODB_URI: mongodb://admin:password123@mongodb:27017/ecommerce?authSource=admin
+      MONGODB_DATABASE: ecommerce
+      JWT_SECRET: mySecretKey1234567890123456789012345678901234567890
+      JWT_EXPIRATION: 86400000
+      API_URL: /api/v1
+      CORS_ALLOWED_ORIGINS: "*"
+    depends_on:
+      - mongodb
+    networks:
+      - ecommerce-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  ecommerce-network:
+    driver: bridge
