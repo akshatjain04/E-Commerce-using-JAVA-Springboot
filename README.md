@@ -152,9 +152,7 @@ Run tests with:
 mvn test
 ```
 
-==================================================
-PROJECT STRUCTURE SUMMARY:
-==================================================
+## PROJECT STRUCTURE SUMMARY:
 
 This Spring Boot E-commerce project follows industry best practices and design patterns:
 
@@ -201,78 +199,3 @@ This Spring Boot E-commerce project follows industry best practices and design p
 - **Testing**: Structured for unit and integration testing
 
 This project structure provides a solid foundation for an enterprise-level e-commerce application with room for future enhancements and scaling.
-
-Directory Structure:
-
-src/
-├── main/
-│ ├── java/
-│ │ └── com/
-│ │ └── ecommerce/
-│ │ ├── EcommerceApplication.java
-│ │ ├── config/
-│ │ │ ├── DatabaseConfig.java
-│ │ │ ├── SecurityConfig.java
-│ │ │ ├── CorsConfig.java
-│ │ │ └── ModelMapperConfig.java
-│ │ ├── controller/
-│ │ │ ├── CategoryController.java
-│ │ │ ├── ProductController.java
-│ │ │ ├── UserController.java
-│ │ │ └── OrderController.java
-│ │ ├── dto/
-│ │ │ ├── request/
-│ │ │ │ ├── CategoryRequestDto.java
-│ │ │ │ ├── ProductRequestDto.java
-│ │ │ │ ├── UserRegistrationDto.java
-│ │ │ │ ├── UserLoginDto.java
-│ │ │ │ └── OrderRequestDto.java
-│ │ │ └── response/
-│ │ │ ├── CategoryResponseDto.java
-│ │ │ ├── ProductResponseDto.java
-│ │ │ ├── UserResponseDto.java
-│ │ │ ├── OrderResponseDto.java
-│ │ │ └── AuthResponseDto.java
-│ │ ├── exception/
-│ │ │ ├── GlobalExceptionHandler.java
-│ │ │ ├── ResourceNotFoundException.java
-│ │ │ ├── BadRequestException.java
-│ │ │ └── UnauthorizedException.java
-│ │ ├── filter/
-│ │ │ ├── JwtAuthenticationFilter.java
-│ │ │ └── LoggingFilter.java
-│ │ ├── model/
-│ │ │ ├── Category.java
-│ │ │ ├── Product.java
-│ │ │ ├── User.java
-│ │ │ ├── Order.java
-│ │ │ └── OrderItem.java
-│ │ ├── repository/
-│ │ │ ├── CategoryRepository.java
-│ │ │ ├── ProductRepository.java
-│ │ │ ├── UserRepository.java
-│ │ │ └── OrderRepository.java
-│ │ ├── security/
-│ │ │ ├── JwtUtil.java
-│ │ │ ├── UserDetailsServiceImpl.java
-│ │ │ └── CustomUserDetails.java
-│ │ └── service/
-│ │ ├── CategoryService.java
-│ │ ├── ProductService.java
-│ │ ├── UserService.java
-│ │ ├── OrderService.java
-│ │ └── impl/
-│ │ ├── CategoryServiceImpl.java
-│ │ ├── ProductServiceImpl.java
-│ │ ├── UserServiceImpl.java
-│ │ └── OrderServiceImpl.java
-├── test/
-│ └── java/
-│ └── com/
-│ └── ecommerce/
-│ ├── EcommerceApplicationTests.java
-│ ├── controller/
-│ ├── service/
-│ └── repository/
-├── pom.xml
-└── README.md
